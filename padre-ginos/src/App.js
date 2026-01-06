@@ -1,3 +1,8 @@
+import React from "react";
+// Pas de curly= importe tout
+import { createRoot } from "react-dom/client";
+// named import, va dans la library et prend juste createRoot
+
 const Pizza = (props) => {
   return React.createElement("div", {}, [
     React.createElement("h1", {}, props.name),
@@ -33,5 +38,5 @@ const App = () => {
 };
 
 const container = document.getElementById("root");
-const root = ReactDOM.createRoot(container);
+const root = createRoot(container);
 root.render(React.createElement(App));
